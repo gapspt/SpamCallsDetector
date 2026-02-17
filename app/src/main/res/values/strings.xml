@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Spam Calls Detector</string>
+    <string name="call_screening_name">Spam Detector</string>
+</resources>
