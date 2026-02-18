@@ -60,6 +60,8 @@ class MainActivity : AppCompatActivity() {
         layout.addView(notificationStatusText)
         layout.addView(grantButton)
         setContentView(layout)
+
+        Notifications.createNotificationChannel(this)
     }
 
     override fun onResume() {
