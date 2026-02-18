@@ -20,11 +20,12 @@ object Notifications {
         notificationManager.createNotificationChannel(channel)
     }
 
-    fun showCallDetectionNotification(context: Context, title: String, text: String) {
+    fun showCallDetectionNotification(context: Context, title: String, shortText: String, bigText: String) {
         val notification = NotificationCompat.Builder(context, CALL_VERIFICATION_CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_menu_call)
             .setContentTitle(title)
-            .setContentText(text)
+            .setContentText(shortText)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(bigText))
             .setPriority(NotificationCompat.PRIORITY_MAX)
             .setCategory(NotificationCompat.CATEGORY_CALL)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
